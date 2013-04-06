@@ -8,7 +8,7 @@ Usage
 
 Example: Creating a report of log files that are over 1MB in size.
 
-'''
+```
 import os, time, datetime
 
 data = []
@@ -36,4 +36,4 @@ fields = (
 doc = DataToPdf(fields, data, sort_by=('size', 'DESC'),
                 title='Log Files Over 1MB')
 doc.export('LogFiles.pdf')
-'''
+```
