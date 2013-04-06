@@ -20,8 +20,8 @@ class DataToPdf():
                 name for the table header.
             data - The data to insert to the table formatted as a list of
                 dictionaries.
-            sort_by - A tuple (sort_key, sort_order) specifying which field to
-                sort by and the sort order ('ASC', 'DESC').
+            sort_by - A tuple (sort_key, sort_order) specifying which field
+                to sort by and the sort order ('ASC', 'DESC').
             title - The title to display at the beginning of the document.
         """
         self.fields = fields
@@ -37,8 +37,8 @@ class DataToPdf():
             filename - The filename for the generated PDF file.
             data_align - The alignment of the data inside the table (eg.
                 'LEFT', 'CENTER', 'RIGHT')
-            table_halign - Horizontal alignment of the table on the page (eg.
-                'LEFT', 'CENTER', 'RIGHT')
+            table_halign - Horizontal alignment of the table on the page
+                (eg. 'LEFT', 'CENTER', 'RIGHT')
         """
         doc = SimpleDocTemplate(filename, pagesize=letter)
         
@@ -79,7 +79,7 @@ class DataToPdf():
         the PDF table.
         """
         # Create 2 separate lists in the same order: one for the 
-        # list of keys andthe other for the names to display in the
+        # list of keys and the other for the names to display in the
         # table header.
         keys, names = zip(*[[k, n] for k, n in self.fields])
         new_data = [names]
