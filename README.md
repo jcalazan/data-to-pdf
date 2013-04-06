@@ -6,6 +6,8 @@ Export data in the form of a list of dictionaries to a table in a PDF file.
 Usage
 -----
 
+Example: Creating a report of log files that are over 1MB in size.
+
 import os, time, datetime
 
 data = []
